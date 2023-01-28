@@ -1,0 +1,93 @@
+{
+  "name": "flutter-clean-arch",
+  "displayName": "flutter_clean_arch",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "flutter-clean-arch.create.useCase",
+        "title": "Generate UseCase"
+      },
+      {
+        "command": "flutter-clean-arch.create.pages",
+        "title": "Generate Pages"
+      },
+      {
+        "command": "flutter-clean-arch.create.presentation",
+        "title": "Generate Presentation"
+      },
+      {
+        "command": "flutter-clean-arch.create.controllers",
+        "title": "Generate Controllers"
+      },
+      {
+        "command": "flutter-clean-arch.create.module",
+        "title": "Generate Module"
+      },
+      {
+        "command": "flutter-clean-arch.create.model",
+        "title": "Generate Model"
+      },
+      {
+        "command": "flutter-clean-arch.create.repository.interface",
+        "title": "Generate Repository Interface"
+      },
+      {
+        "command": "flutter-clean-arch.create.remote",
+        "title": "Generate Remote"
+      },
+      {
+        "command": "flutter-clean-arch.create.repository.imp",
+        "title": "Generate Repository Implementation"
+      },
+      {
+        "command": "flutter-clean-arch.create.datasource.interface",
+        "title": "Generate Datasource Interface"
+      },
+      {
+        "command": "flutter-clean-arch.create.data",
+        "title": "Generate Data"
+      },
+      {
+        "command": "flutter-clean-arch.create.entity",
+        "title": "Generate Entity"
+      },
+      {
+        "command": "flutter-clean-arch.create.domain",
+        "title": "Generate Domain"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
