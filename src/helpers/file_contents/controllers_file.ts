@@ -1,5 +1,6 @@
 export function controllerExports(structName: string): string {
-  let exportsContent = `export '${structName}_controller.dart';`;
+  let exportsContent = `export '${structName}_controller.dart';
+`;
   return exportsContent;
 }
 export function controllerBody(className: string): string {

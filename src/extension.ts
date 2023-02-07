@@ -15,8 +15,6 @@ import { generateCleanUseCase } from './helpers/generate_methods/generate_usecas
 import { generateCleanDomain } from './helpers/generate_methods/generate_domain';
 
 //TODO - permitir selecionar a pasta com botao direito na pasta ao inves de clicar
-//TODO - esta faltando concatenar exports quando criar pastas dentro de um modulo que ja possui conteudo
-//TODO - alterar nome dos arquivos para usar cammel case, esta criando como testeArquivo, deve ser teste_arquivo
 
 export function activate(context: vscode.ExtensionContext) {
 

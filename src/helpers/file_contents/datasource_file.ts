@@ -6,7 +6,7 @@ export 'remote/remote_exports.dart';`;
 }
 export function datasourceBody(className: string): string {
   let datasourceContent = `abstract class ${className}Datasource {
-	Future<double> useMethod();
+	Future<bool> useMethod();
 }`;
   return datasourceContent;
 }

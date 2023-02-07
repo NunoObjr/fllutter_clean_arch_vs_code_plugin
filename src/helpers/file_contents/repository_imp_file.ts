@@ -14,8 +14,6 @@ class ${className}RepositoryImp implements ${className}Repository {
 		try {
 			final result = await _datasource.useMethod();
 			return Right(result);
-		} on Failure catch (_) {
-			return Left(Exception());
 		} on Exception catch (_) {
 			return Left(Exception());
 		}
