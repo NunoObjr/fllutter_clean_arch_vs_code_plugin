@@ -1,9 +1,8 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { repositoryBody, repositoryExports } from '../file_contents/repository_file';
+import { rootFolderPath, errorHandler, findPath, findExports, getFormattedStructName } from '../../../utils';
+import { repositoryBody, repositoryExports } from '../../../file_contents/domain/repositories/repository_file';
 
 export let generateCleanRepositoryInterface = vscode.commands.registerCommand('flutter-clean-arch.create.repository.interface', async () => {
   let structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { remoteBody, remoteExports } from '../file_contents/remote_file';
+import { getFormattedStructName } from '../../../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../../../utils';
+import { remoteBody, remoteExports } from '../../../../file_contents/data/datasource/remote/remote_file';
 
 export let generateCleanRemote = vscode.commands.registerCommand('flutter-clean-arch.create.remote', async () => {
   let structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

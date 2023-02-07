@@ -1,11 +1,11 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { presentationExports } from '../file_contents/presentation_file';
-import { controllerBody, controllerExports } from '../file_contents/controllers_file';
-import { pagesBody, pagesExports } from '../file_contents/pages_file';
-import { getFormattedStructName } from '../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../utils';
+import { presentationExports } from '../../file_contents/presentation/presentation_file';
+import { controllerBody, controllerExports } from '../../file_contents/presentation/controllers/controllers_file';
+import { pagesBody, pagesExports } from '../../file_contents/presentation/pages/pages_file';
+import { getFormattedStructName } from '../../format_struct_name';
 
 export let generateCleanPresentation = vscode.commands.registerCommand('flutter-clean-arch.create.presentation', async () => {
   var structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

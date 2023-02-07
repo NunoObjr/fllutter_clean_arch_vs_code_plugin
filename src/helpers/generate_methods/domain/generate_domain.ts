@@ -1,13 +1,13 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { domainExports } from '../file_contents/domain_file';
-import { entityBody, entityExports } from '../file_contents/entity_file';
-import { repositoryImpBody, repositoryImpExports } from '../file_contents/repository_imp_file';
-import { repositoryBody, repositoryExports } from '../file_contents/repository_file';
-import { usecaseBody, usecaseExports } from '../file_contents/usecase_file';
-import { getFormattedStructName } from '../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../utils';
+import { domainExports } from '../../file_contents/domain/domain_file';
+import { entityBody, entityExports } from '../../file_contents/domain/entities/entity_file';
+import { repositoryImpBody, repositoryImpExports } from '../../file_contents/data/repositories/repository_imp_file';
+import { repositoryBody, repositoryExports } from '../../file_contents/domain/repositories/repository_file';
+import { usecaseBody, usecaseExports } from '../../file_contents/domain/usecase/usecase_file';
+import { getFormattedStructName } from '../../format_struct_name';
 
 export let generateCleanDomain = vscode.commands.registerCommand('flutter-clean-arch.create.domain', async (userCalled: any) => {
   var structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

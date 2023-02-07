@@ -1,9 +1,8 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { entityBody, entityExports } from '../file_contents/entity_file';
+import { rootFolderPath, errorHandler, findPath, findExports, getFormattedStructName } from '../../../utils';
+import { entityBody, entityExports } from '../../../file_contents/domain/entities/entity_file';
 
 export let generateCleanEntity = vscode.commands.registerCommand('flutter-clean-arch.create.entity', async () => {
   let structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { modelBody, modelExports } from '../file_contents/model_file';
+import { getFormattedStructName } from '../../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../../utils';
+import { modelBody, modelExports } from '../../../file_contents/data/models/model_file';
 
 export let generateCleanModel = vscode.commands.registerCommand('flutter-clean-arch.create.model', async () => {
   let structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

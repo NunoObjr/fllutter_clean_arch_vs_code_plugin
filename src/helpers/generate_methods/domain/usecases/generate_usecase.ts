@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { usecaseBody, usecaseExports } from '../file_contents/usecase_file';
+import { getFormattedStructName } from '../../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../../utils';
+import { usecaseBody, usecaseExports } from '../../../file_contents/domain/usecase/usecase_file';
 
 export let generateCleanUseCase = vscode.commands.registerCommand('flutter-clean-arch.create.useCase', async () => {
 

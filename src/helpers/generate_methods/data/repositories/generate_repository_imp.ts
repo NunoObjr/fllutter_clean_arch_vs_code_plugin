@@ -2,9 +2,9 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { repositoryImpBody, repositoryImpExports } from '../file_contents/repository_imp_file';
+import { getFormattedStructName } from '../../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../../utils';
+import { repositoryImpBody, repositoryImpExports } from '../../../file_contents/data/repositories/repository_imp_file';
 
 export let generateCleanRepositoryImp = vscode.commands.registerCommand('flutter-clean-arch.create.repository.imp', async () => {
 

@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { controllerBody, controllerExports } from '../file_contents/controllers_file';
+import { getFormattedStructName } from '../../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../../utils';
+import { controllerBody, controllerExports } from '../../../file_contents/presentation/controllers/controllers_file';
 
 export let generateCleanControllers = vscode.commands.registerCommand('flutter-clean-arch.create.controllers', async () => {
   let structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

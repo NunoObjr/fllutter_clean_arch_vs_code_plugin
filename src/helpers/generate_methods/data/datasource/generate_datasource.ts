@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { datasourceBody, datasourceExports } from '../file_contents/datasource_file';
-import { remoteBody, remoteExports } from '../file_contents/remote_file';
+import { getFormattedStructName } from '../../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../../utils';
+import { datasourceBody, datasourceExports } from '../../../file_contents/data/datasource/datasource_file';
+import { remoteBody, remoteExports } from '../../../file_contents/data/datasource/remote/remote_file';
 
 export let generateCleanDatasourceInterface = vscode.commands.registerCommand('flutter-clean-arch.create.datasource.interface', async () => {
   let structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

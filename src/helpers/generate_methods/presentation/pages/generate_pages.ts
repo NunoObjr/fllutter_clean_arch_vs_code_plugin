@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath, findExports } from '../utils';
-import { pagesBody, pagesExports } from '../file_contents/pages_file';
+import { getFormattedStructName } from '../../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath, findExports } from '../../../utils';
+import { pagesBody, pagesExports } from '../../../file_contents/presentation/pages/pages_file';
 
 export let generateCleanPages = vscode.commands.registerCommand('flutter-clean-arch.create.pages', async () => {
   let structName = await vscode.window.showInputBox({ prompt: "Structure Name (type it in snake case)" });

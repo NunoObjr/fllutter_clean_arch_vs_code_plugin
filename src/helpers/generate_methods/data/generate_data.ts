@@ -1,13 +1,13 @@
 import * as vscode from 'vscode';
 import path = require('path');
 import fs = require("fs");
-import { getFormattedStructName } from '../format_struct_name';
-import { rootFolderPath, errorHandler, findPath } from '../utils';
-import { dataExports } from '../file_contents/data_file';
-import { datasourceBody, datasourceExports } from '../file_contents/datasource_file';
-import { repositoryImpBody, repositoryImpExports } from '../file_contents/repository_imp_file';
-import { modelBody, modelExports } from '../file_contents/model_file';
-import { remoteBody, remoteExports } from '../file_contents/remote_file';
+import { getFormattedStructName } from '../../format_struct_name';
+import { rootFolderPath, errorHandler, findPath } from '../../utils';
+import { dataExports } from '../../file_contents/data/data_file';
+import { datasourceBody, datasourceExports } from '../../file_contents/data/datasource/datasource_file';
+import { repositoryImpBody, repositoryImpExports } from '../../file_contents/data/repositories/repository_imp_file';
+import { modelBody, modelExports } from '../../file_contents/data/models/model_file';
+import { remoteBody, remoteExports } from '../../file_contents/data/datasource/remote/remote_file';
 
 export let generateCleanData = vscode.commands.registerCommand('flutter-clean-arch.create.data', async () => {
 
